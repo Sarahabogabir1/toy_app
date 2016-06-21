@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
-  # GET /users
-  # GET /users.json
+
+  #This index action has the line @users = User.all 
+  #which asks the User model to retrieve a list of all
+   #the users from the database (Step 4), and then places them in the variable @users
   def index
     @users = User.all
   end
